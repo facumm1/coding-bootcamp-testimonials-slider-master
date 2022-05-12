@@ -20,12 +20,20 @@ body {
 }
 
 .container {
+  align-items: center;
   background-image: url("/images/pattern-curve.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  display: flex;
   height: 100vh;
+  justify-content: center;
   width: 100vw;
+
+}
+
+.slider{
+  position: relative;
 }
 
 /* Cards config */
@@ -35,7 +43,6 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-
   width: 100%;
 }
 
@@ -128,6 +135,11 @@ body {
   outline: none;
 }
 
+.button-slider button:hover{
+  background-color: hsla(240, 18%, 77%, 0.615);
+  transition-duration: .5s;
+}
+
 .button-slider button img {
   width: 80%;
 }
@@ -153,6 +165,8 @@ body {
 /* Diseño desktop: 1440px */
 
 @media screen and (min-width: 768px) {
+  /* Raiz */
+
   .container {
     align-items: center;
     background-position: left bottom;
@@ -164,20 +178,28 @@ body {
     width: 100vw;
   }
 
+  .slider{
+    display: block; 
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+  }
+
   /* Cards config */
 
   .card-1 {
-    display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    width: 80%;
+    margin: 0 auto;
+    width: auto;
+    max-width: 800px;
   }
 
   .card-2{
-    display: none; 
     flex-direction: row-reverse;
-    justify-content: center;
-    width: 75%;
+    margin: 0 auto;
+    width: auto;
+    max-width: 800px;
   }
 
   /* IMAGE */
@@ -186,13 +208,13 @@ body {
     justify-content: center;
     background-size: 85%;
     background-position: center 50%;
-    min-width: 572px;
+    min-width: 500px;
   }
 
   .image .person-image {
     margin: 1rem;
     border-radius: 0.5rem;
-    width: 322px;
+    width: 320px;
   }
 
   /* DIV */
@@ -201,9 +223,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: -175px;
+    margin-right: -150px;
     padding: 0;
-    width: 50%;
+    width: 100%;
   }
 
   /* TEXT */
@@ -218,7 +240,7 @@ body {
     animation: showup-effect 1s ease forwards;
     transform: translateX(-30%);
 
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 45px;
     padding: 0;
@@ -229,7 +251,7 @@ body {
 
   .person-name {
     display: flex;
-    font-size: 13px;
+    font-size: 12px;
     justify-content: flex-start;
     margin-top: 1.5rem;
     /* padding-left: 1.5rem; */
@@ -247,13 +269,13 @@ body {
   .button-slider {
     display: flex;
     position: absolute;
-
-    left: 50%;
-    transform: translateX(-170%);
-
-    top: 575px;
-     
     width: 80px;
+
+    left: 51%;
+    transform: none;
+
+    top: 50%;
+    transform: translateY(350%);
   }
 
   .button-slider button img {
@@ -272,12 +294,6 @@ body {
   .button-slider .next,
   .button-slider .prev {
     padding: .75rem .9rem;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1100px) {
-  .text p {
-    font-size: 22px;
   }
 }
 
