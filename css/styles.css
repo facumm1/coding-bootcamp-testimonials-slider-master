@@ -44,6 +44,7 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .card-2 {
@@ -52,6 +53,7 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 /* Diseño responsive: 375px */
