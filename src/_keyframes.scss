@@ -1,0 +1,13 @@
+/* Animations */
+
+@keyframes showup-effect {
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes showup-effectImg {
+  to {
+    transform: translateY(0%);
+  }
+}

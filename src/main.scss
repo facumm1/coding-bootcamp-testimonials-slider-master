@@ -1,0 +1,31 @@
+@import "variables";
+
+/* General */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--dark-blue);
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+
+  .container {
+    align-items: center;
+    background-image: url("../images/pattern-curve.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+  }
+}
+
+@import "card-slider";
+@import "media-queries";
+@import "keyframes";
